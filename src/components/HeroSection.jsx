@@ -7,7 +7,7 @@ const HeroSection = () => {
         Everybody read the HeroSection before editing
       </h1>
 
-      {/* It was successful at last */}
+      {/* It was finally successful. Note, that I've been tryna work on this since 8 o clock in the morning. And it finally wworked, around 4.59 PM */}
     </>
   );
 };
