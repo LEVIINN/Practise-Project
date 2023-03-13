@@ -1280,6 +1280,11 @@
     "section-matter" "^1.0.0"
     "strip-bom-string" "^1.0.0"
 
+"gsap@^3.11.4":
+  "integrity" "sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA=="
+  "resolved" "https://registry.npmjs.org/gsap/-/gsap-3.11.4.tgz"
+  "version" "3.11.4"
+
 "has-flag@^3.0.0":
   "integrity" "sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw=="
   "resolved" "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz"
