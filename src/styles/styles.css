@@ -1,0 +1,7 @@
+* {
+  -webkit-font-smoothing: inherit;
+}
+
+.image-container {
+  border-radius: 16px;
+}

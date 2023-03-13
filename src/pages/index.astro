@@ -1,9 +1,11 @@
 ---
 // Import all your REACT COMPONENTS in here
+import Features from "../components/Features.jsx";
 import HeroSection from "../components/HeroSection.jsx";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <HeroSection />
+  <!-- <HeroSection /> -->
+  <Features client:load />
 </Layout>

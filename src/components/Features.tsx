@@ -1,9 +1,129 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/styles.css";
+import { useLayoutEffect } from "react";
 
 export default function Features() {
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const img1: any = gsap.utils.toArray(".img1");
+      const img2: any = gsap.utils.toArray(".img2");
+      const imgContainer = gsap.utils.toArray(".image-container");
+
+      imgContainer.forEach((item: any, i) => {
+        gsap.fromTo(
+          img1[i],
+          {
+            x: -30,
+            y: 30,
+          },
+          {
+            scrollTrigger: {
+              trigger: item,
+              scrub: 0.5,
+            },
+            y: 0,
+            x: 0,
+          }
+        );
+        gsap.fromTo(
+          img2[i],
+          {
+            x: 30,
+            y: -30,
+          },
+          {
+            scrollTrigger: {
+              trigger: item,
+              scrub: 0.5,
+            },
+            y: 0,
+            x: 0,
+          }
+        );
+      });
+      gsap.fromTo(
+        ".variant1",
+        {
+          x: -50,
+          y: 50,
+        },
+        {
+          scrollTrigger: {
+            trigger: ".variantContainer1",
+            scrub: 0.5,
+          },
+          y: 0,
+          x: 0,
+        }
+      );
+      gsap.fromTo(
+        ".variant2",
+        {
+          x: 50,
+          y: 50,
+        },
+        {
+          scrollTrigger: {
+            trigger: ".variantContainer1",
+            scrub: 0.5,
+          },
+          y: 0,
+          x: 0,
+        }
+      );
+      gsap.fromTo(
+        ".variant1-2",
+        {
+          x: 50,
+          y: -50,
+        },
+        {
+          scrollTrigger: {
+            trigger: ".variantContainer2",
+            scrub: 0.5,
+          },
+          y: 0,
+          x: 0,
+        }
+      );
+      gsap.fromTo(
+        ".variant2-2",
+        {
+          x: -50,
+          y: 50,
+        },
+        {
+          scrollTrigger: {
+            trigger: ".variantContainer2",
+            scrub: 0.5,
+          },
+          y: 0,
+          x: 0,
+        }
+      );
+      gsap.fromTo(
+        ".variant3",
+        {
+          y: 50,
+        },
+        {
+          scrollTrigger: {
+            trigger: ".variantContainer2",
+            scrub: 0.5,
+          },
+          y: 0,
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="px-[5rem] py-20 font-['Inter'] pt-10 text-center bg-dark min-h-screen w-screen">
+    <div className=" py-20 font-['Inter'] pt-10 text-center bg-dark min-h-screen w-screen">
       <div className="space-y-7">
         <h4 className="text-green text-xs tracking-wider font-semibold">
           FEATURES
@@ -72,19 +192,19 @@ export default function Features() {
           </p>
         </div>
       </div>
-      <div className="grid items-center grid-cols-2 gap-5 w-full pt-56">
+      <div className="grid items-center  md:grid-cols-2 gap-5 w-full pt-56">
         <div className="relative overflow-visible h-[420px] image-container bg-gradient-to-b from-dark to-midDark">
           <img
             src="https://framerusercontent.com/images/9IA1uytkRsqvIi0dW2FcWyXT24.svg"
-            className="absolute bottom-10 left-10"
+            className="absolute img1 bottom-10 left-10"
           />
           <img
             src="https://framerusercontent.com/images/snhunjenkQbJ0uyVoUfeIvGavk.svg"
             alt=""
-            className="absolute top-10 right-10"
+            className="absolute img2 top-10 right-10"
           />
         </div>
-        <div className="space-y-10 text-left pl-32 pr-10">
+        <div className="space-y-10 text-center md:text-left md:pl-32 md:pr-10">
           <h4 className="text-light text-4xl font-semibold">
             Animations & effects
           </h4>
@@ -96,8 +216,8 @@ export default function Features() {
           </p>
         </div>
       </div>
-      <div className="grid items-center grid-cols-2 gap-5 w-full pt-56">
-        <div className="space-y-10 text-left pr-32">
+      <div className="grid items-center  md:grid-cols-2 gap-5 w-full pt-56">
+        <div className="space-y-10 text-center md:text-left md:pr-32">
           <h4 className="text-light text-4xl font-semibold">
             Desktop, tablet & phone breakpoints
           </h4>
@@ -110,28 +230,28 @@ export default function Features() {
         <div className="relative overflow-visible h-[420px] image-container bg-gradient-to-b from-dark to-midDark">
           <img
             src="https://framerusercontent.com/images/EzGWTWzzzlSYlcUVsqb8nOS0fs.svg"
-            className="absolute h-[309px] w-[400px] bottom-10 left-10"
+            className="absolute h-[309px] img1 w-[400px] bottom-10 left-10"
           />
           <img
             src="https://framerusercontent.com/images/WUE0fvM6g0QpZ6OQKyOWD7gO74.svg"
             alt=""
-            className="absolute top-10 h-[295px] w-[132px] right-10"
+            className="absolute top-10 h-[295px] img2 w-[132px] right-10"
           />
         </div>
       </div>
-      <div className="grid items-center grid-cols-2 gap-5 w-full pt-56">
-        <div className="relative overflow-visible h-[420px] image-container bg-gradient-to-b from-dark to-midDark">
+      <div className="grid items-center  md:grid-cols-2 gap-5 w-full pt-56">
+        <div className="relative overflow-visible h-[420px] variantContainer1 image-container bg-gradient-to-b from-dark to-midDark">
           <img
             src="https://framerusercontent.com/images/cusMo9vcDoohgjddqIrtEFz29E.svg"
-            className="absolute top-10 left-10"
+            className="absolute variant1 top-10 left-10"
           />
           <img
             src="https://framerusercontent.com/images/mY5xY2nxrIT2VTOVtJHPf2uIY.svg"
             alt=""
-            className="absolute bottom-10 right-10"
+            className="absolute variant2 bottom-10 right-10"
           />
         </div>
-        <div className="space-y-10 text-left pl-32 pr-10">
+        <div className="space-y-10 text-center md:text-left md:pl-32 md:pr-10">
           <h4 className="text-light text-4xl font-semibold">
             Color & text styles
           </h4>
@@ -143,8 +263,8 @@ export default function Features() {
           </p>
         </div>
       </div>
-      <div className="grid items-center grid-cols-2 gap-5 w-full pt-56">
-        <div className="space-y-10 text-left pr-32">
+      <div className="grid items-center  md:grid-cols-2 gap-5 w-full pt-56">
+        <div className="space-y-10 text-center md:text-left md:pr-32">
           <h4 className="text-light text-4xl font-semibold">
             Components to keep things organised
           </h4>
@@ -154,21 +274,21 @@ export default function Features() {
             every little detail is consistent across the entire template.
           </p>
         </div>
-        <div className="relative overflow-visible h-[420px] image-container bg-gradient-to-b from-dark to-midDark">
-          <div className="absolute h-full top-0 bottom-0 w-full items-center flex justify-center left-0 m-auto">
+        <div className="relative overflow-visible h-[420px] variantContainer2 image-container bg-gradient-to-b from-dark to-midDark">
+          <div className="absolute h-full top-0 bottom-0 w-full items-center  flex justify-center left-0 m-auto">
             <img
               src="https://framerusercontent.com/images/Oc8nMs35gp5Uu5mIHX7ZsZAslPo.svg"
-              className="w-fit h-fit"
+              className="w-fit variant3 h-fit"
             />
           </div>
           <img
             src="https://framerusercontent.com/images/HXKiKKCqXDGOKOWKtVO0e6Kf8.svg"
-            className="absolute top-10 right-10"
+            className="absolute variant1-2 top-10 right-10"
           />
           <img
             src="https://framerusercontent.com/images/5Ti2gZI6f6EYBmLyOloqmRIU0.svg"
             alt=""
-            className="absolute bottom-10 left-10"
+            className="absolute variant2-2 bottom-10 left-10"
           />
         </div>
       </div>
