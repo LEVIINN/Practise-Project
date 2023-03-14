@@ -11,7 +11,7 @@ export interface Props{
 
 <section class="showcase">
 <div class="show">
-    <h1><span style="color: #918CF2;">Launch your startup</span> with <br/>this Framer template</h1>
+    <h1><span style="color: #918CF2;">Launch your startup</span> with this Framer template</h1>
     <p>Customize to fit your brand and impress your customers with a professional online presence.</p>
     <center><button class="btn">Start using Compact</button></center>
     <div class="pic">
@@ -67,7 +67,6 @@ export interface Props{
         color: #a1a4aa;
         letter-spacing: -0.25px;
         font-weight: 300;
-        
     }
 
     .show button
@@ -126,5 +125,53 @@ export interface Props{
         height: 900px;
         margin: auto;
         /* background-color: #e2e2e2; */
+
+        /* media query */
+
+        @media (max-width: 960px) {
+
+            .show h1
+    {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 42px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        color: #e3e5ea;
+    }
+
+    .show p
+    {   
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        color: #a1a4aa;
+        letter-spacing: -0.25px;
+        font-weight: 300;
+    }
+
+    .show button
+    {
+        padding: 14px 24px;
+        border-radius: 8px;
+        border: 0;
+        margin-top: 48px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #0e1015;
+        background-color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        transition: ease-in-out 0.45s;
+    }
+
+    .show h5
+    {
+        color: #61d1ac;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 1px;
+        font-size: 10px;
+    }
+
+        }
+
 
 </style>
