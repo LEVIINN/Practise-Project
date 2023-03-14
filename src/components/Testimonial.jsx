@@ -30,8 +30,8 @@ const Testimonial = () => {
 
   return (
     <Fragment>
-      <div className="bg-[#0e1015]">
-        <div className="text-xl h-[100%] lg:h-screen w-[90%] flex items-center justify-center mx-auto">
+      <div className="bg-[#0e1015] font-['Inter']">
+        <div className="text-xl min-h-screen w-[90%] flex items-center justify-center mx-auto">
           <div className="">
             <h3 className="text-center text-[#ecf589] text-sm my-8">
               TESTIMONIALS
@@ -43,9 +43,9 @@ const Testimonial = () => {
               Here are some nice things our users have said about our template
               (totally not fake).{" "}
             </p>
-            <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 my-8">
+            <div className="grid gap-4 lg:grid-cols-3 my-8">
               {testmonials.map((testmonial) => (
-                <div className="bg-[#14171f] rounded-xl p-10">
+                <div className="bg-[#14171f] rounded-xl p-10 sm:w-[90%] md:w-[70%] mx-auto lg:w-full">
                   <div className="flex items-center mb-4">
                     <img
                       src={testmonial.image}
@@ -53,15 +53,15 @@ const Testimonial = () => {
                       className="h-[60px] w-[60px] rounded-full"
                     />
                     <div className="ml-4">
-                      <h1 className="text-[#e3e4e8] text-lg">
+                      <h1 className="text-[#e3e4e8] text-base">
                         {testmonial.name}
                       </h1>
-                      <p className="text-[#a1a4aa] text-base">
+                      <p className="text-[#a1a4aa] text-sm">
                         {testmonial.occupation}
                       </p>
                     </div>
                   </div>
-                  <p className="text-[#e3e4e8] text-lg">{testmonial.title}</p>
+                  <p className="text-[#e3e4e8] text-base">{testmonial.title}</p>
                 </div>
               ))}
             </div>
