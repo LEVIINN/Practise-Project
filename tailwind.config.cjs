@@ -11,6 +11,13 @@ module.exports = {
         lg: "1200px",
         xl: "1700px",
       },
+      colors: {
+        green: "rgb(97, 209, 172)",
+        dark: "rgb(14, 16, 21)",
+        midDark: "rgb(20, 23, 31)",
+        light: "rgb(227, 228, 232)",
+        midLight: "rgb(161, 164, 170)",
+      },
     },
   },
   plugins: [],

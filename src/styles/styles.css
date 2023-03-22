@@ -1,0 +1,14 @@
+* {
+  -webkit-font-smoothing: inherit;
+}
+
+.image-container {
+  border-radius: 16px;
+  @apply h-72 md:h-auto;
+}
+.img1,
+.img2,
+.variant1,
+.variant2 {
+  @apply w-[50%] md:w-auto;
+}
