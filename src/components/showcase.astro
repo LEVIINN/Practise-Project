@@ -1,0 +1,177 @@
+---
+export interface Props{
+    heading?: string ;
+    text?: string ;
+}
+
+
+---
+
+
+
+<section class="showcase">
+<div class="show">
+    <h1><span style="color: #918CF2;">Launch your startup</span> with this Framer template</h1>
+    <p>Customize to fit your brand and impress your customers with a professional online presence.</p>
+    <center><button class="btn">Start using Compact</button></center>
+    <div class="pic">
+    </div>
+    <h5>ALREADY USED BY 100+ DESIGNERS!</h5>
+</div>
+</section>
+
+<section class="page">
+    <div class="pge"></div>
+</section>
+
+
+
+
+<style>
+    .showcase
+    {
+        width: 100%;
+        height: fit-content;
+        background-color: rgb(14, 16, 21);
+        padding-top: 100px;
+        padding-bottom: 100px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .show
+    {
+        width: 70%;
+        height: auto;
+        display: block;
+        /* background-color: aquamarine; */
+        text-align: center;
+        margin-top: -40px;
+    }
+    .show h1
+    {
+        font-size: 72px;
+        font-weight: 600;
+        line-height: 76px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        color: #e3e5ea;
+    }
+
+    .show p
+    {   
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        color: #a1a4aa;
+        letter-spacing: -0.25px;
+        font-weight: 300;
+    }
+
+    .show button
+    {
+        padding: 14px 24px;
+        border-radius: 8px;
+        border: 0;
+        margin-top: 48px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #0e1015;
+        background-color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        transition: ease-in-out 0.45s;
+    }
+
+    .show button:hover
+    {
+        background-color: #c9cbcf;
+    }
+
+    .pic
+    {
+        width: 15%;
+        height: 40px;
+        margin: auto;
+        margin-top: 48px;
+        background-image: url(../components/images/Group1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    .show h5
+    {
+        color: #61d1ac;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+    /* .page
+    {
+        width: 100%;
+        height: 1200px;
+        background-color: #0e1015;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page .pge
+    {
+        width: 40%;
+        height: 900px;
+        margin: auto;
+        /* background-color: #e2e2e2; */
+
+        /* media query */
+
+        @media (max-width: 960px) {
+
+            .show h1
+    {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 42px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        color: #e3e5ea;
+    }
+
+    .show p
+    {   
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        color: #a1a4aa;
+        letter-spacing: -0.25px;
+        font-weight: 300;
+    }
+
+    .show button
+    {
+        padding: 14px 24px;
+        border-radius: 8px;
+        border: 0;
+        margin-top: 48px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #0e1015;
+        background-color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        transition: ease-in-out 0.45s;
+    }
+
+    .show h5
+    {
+        color: #61d1ac;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 1px;
+        font-size: 10px;
+    }
+
+        }
+
+
+</style>
