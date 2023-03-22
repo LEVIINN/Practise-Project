@@ -1,6 +1,8 @@
 ---
+// Import all your REACT COMPONENTS in here
+import Features from "../components/Features.jsx";
+import HeroSection from "../components/HeroSection.jsx";
 import Layout from "../layouts/Layout.astro";
-import Testimonial from "../components/Testimonial.jsx"
 import Header from "../components/header.astro"
 import Showcase from "../components/showcase.astro"
 ---
@@ -9,7 +11,6 @@ import Showcase from "../components/showcase.astro"
   <Header />
 	<Showcase />
   <Features client:load />
-  <Testimonial />
 </Layout>
 
 
