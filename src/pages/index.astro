@@ -1,28 +1,23 @@
 ---
 // Import all your REACT COMPONENTS in here
 import Features from "../components/Features.jsx";
-import HeroSection from "../components/HeroSection.jsx";
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/header.astro"
-import Showcase from "../components/showcase.astro"
-import Testimonial from "../components/Testimonial.jsx"
+import Header from "../components/header.astro";
+import Showcase from "../components/Showcase.astro";
+import Testimonial from "../components/Testimonial.jsx";
 ---
 
 <Layout>
   <Header />
-	<Showcase />
+  <Showcase />
   <Features client:load />
-	<Testimonial />
+  <Testimonial />
 </Layout>
 
-
-
-
 <style>
-	body
-	{
-		margin: 0;
-		padding: 0;
-		font-family: 'Inter', sans-serif;
-	}
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  }
 </style>
