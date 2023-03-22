@@ -30,4 +30,4 @@ Things you will need to get started. Hopefully this project is a success, then t
     #     xl: "1700px",
     #   },
 
- 
+ https://compact.framer.website/
