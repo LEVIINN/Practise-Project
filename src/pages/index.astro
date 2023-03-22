@@ -1,9 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Testimonial from "../components/Testimonial.jsx"
-
+import Header from "../components/header.astro"
+import Showcase from "../components/showcase.astro"
 ---
 
 <Layout>
+  <Header />
+	<Showcase />
+  <Features client:load />
   <Testimonial />
 </Layout>
+
+
+
+
+<style>
+	body
+	{
+		margin: 0;
+		padding: 0;
+		font-family: 'Inter', sans-serif;
+	}
+</style>
