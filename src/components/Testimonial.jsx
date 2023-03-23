@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 
 const Testimonial = () => {
-
   const testmonials = [
     {
+      id: 1,
       image:
         "https://framerusercontent.com/images/NOxlPZmgcQR4kkzg3A4NjqZuYSU.webp",
       name: "Michael Grass",
@@ -12,6 +12,7 @@ const Testimonial = () => {
         "With this template it's easy to create a beautiful website in no time. I have been using Compact for some time now and it has been working great for me!",
     },
     {
+      id: 2,
       image:
         "https://framerusercontent.com/images/4EIANjev7LuKhnhOHDsv1sNBN4Y.webp",
       name: "Tom Ward",
@@ -20,6 +21,7 @@ const Testimonial = () => {
         "I have tried a lot of similar products and Compact is the best! I'll recommend it to everyone for sure 🔥",
     },
     {
+      id: 3,
       image:
         "https://framerusercontent.com/images/o5CxWeo9S23mxGCOjIDR1A4ltc.webp",
       name: "Julie Choo",
@@ -46,7 +48,10 @@ const Testimonial = () => {
             </p>
             <div className="grid gap-4 lg:grid-cols-3 my-8">
               {testmonials.map((testmonial) => (
-                <div className="bg-[#14171f] rounded-xl p-10 sm:w-[90%] md:w-[70%] mx-auto lg:w-full">
+                <div
+                  className="bg-[#14171f] rounded-xl p-10 sm:w-[90%] md:w-[70%] mx-auto lg:w-full"
+                  key={testmonial.id}
+                >
                   <div className="flex items-center mb-4">
                     <img
                       src={testmonial.image}

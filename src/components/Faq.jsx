@@ -26,7 +26,7 @@ const Faq = () => {
       <section className="text-light my-12">
         <div className="flex justify-between">
           <h3>Do I need this template</h3>
-          <button onClick={setActive((prev) => !prev)} className="p-2">
+          <button onClick={() => setActive(!active)} className="p-2">
             {active ? <FaTimes /> : <AiOutlinePlus />}
           </button>
         </div>
