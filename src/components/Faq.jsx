@@ -5,7 +5,7 @@ import {
   AiOutlineFacebook,
   AiOutlineTwitter,
   AiOutlineGithub,
-} from "react-icons/ai";
+} from "react-icons/ai/index.js";
 import { BsLinkedin } from "react-icons/bs";
 import IMG from "./images/compact.png";
 
