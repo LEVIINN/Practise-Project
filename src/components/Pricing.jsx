@@ -7,7 +7,7 @@ const Pricing = () => {
         <div className="">
           <div className="">
             <h3 className="text-center text-[#918cf2] text-sm my-8">PRICING</h3>
-            <h1 className="text-center text-[#e3e4e8] text-5xl my-8">
+            <h1 className="text-center text-[#e3e4e8] text-3xl my-8 font-[600]">
               Simple and transparent pricing
             </h1>
             <p className="text-center text-[#a1a4aa] text-base">
@@ -42,7 +42,7 @@ const Pricing = () => {
               <p className="">Startup</p>
               <h1 className="text-4xl my-4">$20</h1>
               <p className="text-[#a1a4aa] text-base my-4">
-              Great for Saas businesses, startups and designers.
+                Great for Saas businesses, startups and designers.
               </p>
               <hr />
               <div className="flex my-4">
@@ -73,13 +73,15 @@ const Pricing = () => {
                 />
                 <p className="ml-2">Built in Framer analytics</p>
               </div>
-              <button className="bg-white rounded-lg w-full py-3 text-center text-black my-6 font-bold">Start Using Compact</button>
+              <button className="bg-white rounded-lg w-full py-3 text-center text-black my-6 font-bold">
+                Start Using Compact
+              </button>
             </div>
             <div className="p-8 bg-[#21232c] rounded-3xl text-[#e3e4e8] text-sm">
               <p className="">Custom</p>
               <h1 className="text-4xl my-4">Get in touch</h1>
               <p className="text-[#a1a4aa] text-base my-4">
-              If you want that personal touch and maybe custom pages too.
+                If you want that personal touch and maybe custom pages too.
               </p>
               <hr />
               <div className="flex my-4">
