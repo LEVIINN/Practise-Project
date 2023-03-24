@@ -6,7 +6,7 @@ import {
   AiOutlineTwitter,
   AiOutlineGithub,
 } from "react-icons/ai/index.js";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs/index.js";
 import IMG from "./images/compact.png";
 
 const Accordian = ({ header, content }) => {
