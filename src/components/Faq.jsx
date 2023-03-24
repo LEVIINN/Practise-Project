@@ -1,13 +1,7 @@
 import { useState } from "react";
-import {
-  AiOutlinePlus,
-  AiOutlineClose,
-  AiOutlineFacebook,
-  AiOutlineTwitter,
-  AiOutlineGithub,
-} from "react-icons/ai/index.js";
-import { BsLinkedin } from "react-icons/bs/index.js";
 import IMG from "./images/compact.png";
+
+import { Icon } from "@iconify/react";
 
 const Accordian = ({ header, content }) => {
   const [active, setActive] = useState(false);
@@ -20,8 +14,12 @@ const Accordian = ({ header, content }) => {
       >
         <div className="flex justify-between hover:text-midLight hover:cursor-pointer">
           <h3 className="font-semibold text-md md:text-xl"> {header}?</h3>
-          <button className="p-2 text-lg">
-            {active ? <AiOutlineClose /> : <AiOutlinePlus />}
+          <button className="p-2 text-lg md:text-2xl">
+            {active ? (
+              <Icon icon="iconoir:cancel" />
+            ) : (
+              <Icon icon="material-symbols:add" />
+            )}
           </button>
         </div>
         {active && (
@@ -90,16 +88,28 @@ const Faq = () => {
             href="https://www.facebook.com/people/Leviinn-Technologies/100090823103737/"
             className="pr-5"
           >
-            <AiOutlineFacebook className="hover:text-light duration-200" />
+            <Icon
+              icon="fa-brands:facebook"
+              className="hover:text-light duration-200"
+            />
           </a>
           <a href="https://twitter.com/leviinnafrica" className="pr-5">
-            <AiOutlineTwitter className="hover:text-light duration-200" />
+            <Icon
+              icon="fa-brands:twitter"
+              className="hover:text-light duration-200"
+            />
           </a>
           <a href="AiOutlineGithub" className="pr-5">
-            <AiOutlineGithub className="hover:text-light duration-200" />
+            <Icon
+              icon="fa-brands:github"
+              className="hover:text-light duration-200"
+            />
           </a>
           <a href="https://www.linkedin.com/company/leviinn/" className="pr-5">
-            <BsLinkedin className="hover:text-light duration-200" />
+            <Icon
+              icon="fa-brands:linkedin"
+              className="hover:text-light duration-200"
+            />
           </a>
         </div>
         <p>Designed by Leviinn Team</p>
