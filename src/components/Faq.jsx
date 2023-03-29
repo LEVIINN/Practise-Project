@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { AiOutlinePlus } from "react-icons/ai";
-import { FaTimes } from "react-icons/fa";
 
 const Faq = () => {
   const [active, setActive] = useState(false);
@@ -27,7 +25,7 @@ const Faq = () => {
         <div className="flex justify-between">
           <h3>Do I need this template</h3>
           <button onClick={() => setActive(!active)} className="p-2">
-            {active ? <FaTimes /> : <AiOutlinePlus />}
+            {/* {active ? <FaTimes /> : <AiOutlinePlus />} */}
           </button>
         </div>
       </section>

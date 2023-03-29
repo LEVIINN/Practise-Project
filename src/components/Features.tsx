@@ -1,127 +1,6 @@
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/styles.css";
-import { useLayoutEffect } from "react";
 
 export default function Features() {
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.registerPlugin(ScrollTrigger);
-
-      const img1: any = gsap.utils.toArray(".img1");
-      const img2: any = gsap.utils.toArray(".img2");
-      const imgContainer = gsap.utils.toArray(".image-container");
-
-      imgContainer.forEach((item: any, i) => {
-        gsap.fromTo(
-          img1[i],
-          {
-            x: -30,
-            y: 30,
-          },
-          {
-            scrollTrigger: {
-              trigger: item,
-              scrub: 0.5,
-            },
-            y: 0,
-            x: 0,
-          }
-        );
-        gsap.fromTo(
-          img2[i],
-          {
-            x: 30,
-            y: -30,
-          },
-          {
-            scrollTrigger: {
-              trigger: item,
-              scrub: 0.5,
-            },
-            y: 0,
-            x: 0,
-          }
-        );
-      });
-      gsap.fromTo(
-        ".variant1",
-        {
-          x: -50,
-          y: 50,
-        },
-        {
-          scrollTrigger: {
-            trigger: ".variantContainer1",
-            scrub: 0.5,
-          },
-          y: 0,
-          x: 0,
-        }
-      );
-      gsap.fromTo(
-        ".variant2",
-        {
-          x: 50,
-          y: 50,
-        },
-        {
-          scrollTrigger: {
-            trigger: ".variantContainer1",
-            scrub: 0.5,
-          },
-          y: 0,
-          x: 0,
-        }
-      );
-      gsap.fromTo(
-        ".variant1-2",
-        {
-          x: 50,
-          y: -50,
-        },
-        {
-          scrollTrigger: {
-            trigger: ".variantContainer2",
-            scrub: 0.5,
-          },
-          y: 0,
-          x: 0,
-        }
-      );
-      gsap.fromTo(
-        ".variant2-2",
-        {
-          x: -50,
-          y: 50,
-        },
-        {
-          scrollTrigger: {
-            trigger: ".variantContainer2",
-            scrub: 0.5,
-          },
-          y: 0,
-          x: 0,
-        }
-      );
-      gsap.fromTo(
-        ".variant3",
-        {
-          y: 50,
-        },
-        {
-          scrollTrigger: {
-            trigger: ".variantContainer2",
-            scrub: 0.5,
-          },
-          y: 0,
-        }
-      );
-    });
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <div className=" py-20 font-['Inter'] pt-10 text-center bg-dark min-h-screen w-full">
       <div className="space-y-7">
@@ -193,7 +72,7 @@ export default function Features() {
         </div>
       </div>
       <div className="grid items-center  md:grid-cols-2 gap-5 w-full pt-20">
-        <div className="relative overflow-visible h-[420px] order-2 md:order-none image-container bg-gradient-to-b from-dark to-midDark">
+        <div className="relative overflow-hidden h-[420px] order-2 md:order-none image-container bg-gradient-to-b from-dark to-midDark">
           <img
             src="https://framerusercontent.com/images/9IA1uytkRsqvIi0dW2FcWyXT24.svg"
             className="absolute img1 md:bottom-10 bottom-5 left-5 md:left-10"
@@ -227,7 +106,7 @@ export default function Features() {
             regardless of the device they are using.
           </p>
         </div>
-        <div className="relative order-4 md:order-none overflow-visible h-[420px] image-container bg-gradient-to-b from-dark to-midDark">
+        <div className="relative order-4 md:order-none overflow-hidden h-[420px] image-container bg-gradient-to-b from-dark to-midDark">
           <img
             src="https://framerusercontent.com/images/EzGWTWzzzlSYlcUVsqb8nOS0fs.svg"
             className="absolute md:h-[309px] !h-auto !w-[60%] img1 md:w-[400px] md:bottom-10 bottom-5 left-5 md:left-10"
@@ -240,7 +119,7 @@ export default function Features() {
         </div>
       </div>
       <div className="grid items-center md:grid-cols-2 gap-5 w-full pt-20 md:pt-56">
-        <div className="relative order-6 md:order-none overflow-visible h-[420px] variantContainer1 image-container bg-gradient-to-b from-dark to-midDark">
+        <div className="relative order-6 md:order-none overflow-hidden h-[420px] variantContainer1 image-container bg-gradient-to-b from-dark to-midDark">
           <img
             src="https://framerusercontent.com/images/cusMo9vcDoohgjddqIrtEFz29E.svg"
             className="absolute variant1 md:top-10 top-5 left-5 md:left-10"
@@ -274,7 +153,7 @@ export default function Features() {
             every little detail is consistent across the entire template.
           </p>
         </div>
-        <div className="relative overflow-visible !h-[420px] variantContainer2 image-container bg-gradient-to-b from-dark to-midDark">
+        <div className="relative overflow-hidden !h-[420px] variantContainer2 image-container bg-gradient-to-b from-dark to-midDark">
           <div className="absolute order-8 md:order-none h-full top-0 bottom-0 w-full items-center  flex justify-center left-0 m-auto">
             <img
               src="https://framerusercontent.com/images/Oc8nMs35gp5Uu5mIHX7ZsZAslPo.svg"

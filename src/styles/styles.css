@@ -4,7 +4,7 @@
 
 .image-container {
   border-radius: 16px;
-  @apply h-72 md:h-auto;
+  @apply h-72 md:h-[500px];
 }
 .img1,
 .img2,
